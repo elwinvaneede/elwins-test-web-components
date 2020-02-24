@@ -1,14 +1,9 @@
-:host {
-  --color: #262A1C;
-  --background: #F7C956;
-}
-
 div {
-  color: var(--color);
+  color: var(--color-primary-dark, #262A1C);
   font-family: monospace;
   font-weight: bold;
-  background: var(--background);
-  border-radius: 10px;
+  background: var(--color-primary-light, #F7C956);
+  border-radius: var(--border-radius, 10px);
   padding: 15px;
   text-align: center;
   margin-bottom: 15px;
