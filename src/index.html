@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-  <title>Stencil Component Starter</title>
+    <script
+      type="module"
+      src="/build/elwins-test-web-components.esm.js"
+    ></script>
+    <script nomodule src="/build/elwins-test-web-components.js"></script>
 
-  <script type="module" src="/build/elwins-test-web-components.esm.js"></script>
-  <script nomodule src="/build/elwins-test-web-components.js"></script>
-</head>
+    <style>
+      :root {
+        --eve-font-family: Helvetica;
+      }
+    </style>
+  </head>
 
-<body>
-  <my-component first="Jeff"></my-component>
-</body>
+  <body>
+    <eve-introduction first="Jeff"></eve-introduction>
 
+    <eve-button href="http://elwinvaneede.com" target="_blank">
+      Website
+    </eve-button>
+
+    <eve-button
+      href="http://elwinvaneede.com/newsletter"
+      target="_blank"
+      fill="outline"
+    >
+      Newsletter
+    </eve-button>
+  </body>
 </html>

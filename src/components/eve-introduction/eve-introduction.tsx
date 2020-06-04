@@ -2,11 +2,11 @@ import { Component, Prop, h } from "@stencil/core";
 import { format } from "../../utils/utils";
 
 @Component({
-  tag: "my-component",
-  styleUrl: "my-component.css",
-  shadow: true
+  tag: "eve-introduction",
+  styleUrl: "eve-introduction.css",
+  shadow: true,
 })
-export class MyComponent {
+export class EveIntroduction {
   /**
    * The first name
    */
