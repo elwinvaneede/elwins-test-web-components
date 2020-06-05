@@ -33,7 +33,7 @@ _Note: Stencil and [Ionic](https://ionicframework.com/) are completely independe
 ### Node Modules
 
 - Run:
-  ```shell
+  ```bash
   npm install elwins-test-web-components --save
   ```
 - Put a script tag similar to this in the head of your index.html:
@@ -51,7 +51,7 @@ _Note: Stencil and [Ionic](https://ionicframework.com/) are completely independe
 _Bindings to make this process easier will come in the future._
 
 - Run:
-  ```shell
+  ```bash
   npm install elwins-test-web-components --save
   ```
 - Import the components into your `main.js` file by:
@@ -90,7 +90,7 @@ _Bindings to make this process easier will come in the future._
   render() {
     return (
       <div>
-        <eve-button href="https://elwinvaneede.com/newsletter">Newsletter</eve-introduction>
+        <eve-button href="https://elwinvaneede.com/newsletter">Newsletter</eve-button>
       </div>
     )
   }
