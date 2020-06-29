@@ -35,5 +35,7 @@
     "puppeteer": "^1.20.0"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@stencil/vue-output-target": "0.0.1"
+  }
 }

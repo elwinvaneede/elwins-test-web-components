@@ -48,54 +48,7 @@ _Note: Stencil and [Ionic](https://ionicframework.com/) are completely independe
 
 ### Vue
 
-_Bindings to make this process easier will come in the future._
-
-- Run:
-  ```bash
-  npm install elwins-test-web-components --save
-  ```
-- Import the components into your `main.js` file by:
-
-  - importing the node module
-  - telling Vue to ignore the custom element tags (see https://vuejs.org/v2/api/#ignoredElements)
-  - binding the Stenciljs component code to the window object
-  - ```js
-    import Vue from "vue";
-    import App from "./App.vue";
-
-    import {
-      applyPolyfills,
-      defineCustomElements,
-    } from "elwins-test-web-components/loader";
-
-    Vue.config.productionTip = false;
-
-    // Tell Vue to ignore all components defined in the elwins-test-web-components
-    // package. The regex assumes all components names are prefixed
-    // 'eve'
-    Vue.config.ignoredElements = [/eve-\w*/];
-
-    // Bind the custom elements to the window object
-    applyPolyfills().then(() => {
-      defineCustomElements();
-    });
-
-    new Vue({
-      render: (h) => h(App),
-    }).$mount("#app");
-    ```
-
-- The components should then be available in any of the Vue components:
-  ```js
-  render() {
-    return (
-      <div>
-        <eve-button href="https://elwinvaneede.com/newsletter">Newsletter</eve-button>
-      </div>
-    )
-  }
-  ```
-- Vue provides several different ways to install and use the framework in an application. The above technique for integrating a Stencil custom element library has been tested on a Vue application that was created using the vue-cli with ES2015 and WebPack as primary options. A similar technique should work if the application was generated using other options.
+Use the bindings in https://github.com/elwinvaneede/elwins-test-web-components-vue and follow the instructions there.
 
 ### React
 

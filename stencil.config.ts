@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { vueOutputTarget } from '@stencil/vue-output-target';
 
 export const config: Config = {
   namespace: 'elwins-test-web-components',
@@ -7,6 +8,10 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'elwins-test-web-components',
       proxiesFile: '../elwins-test-web-components-react/src/components.ts',
+    }),
+    vueOutputTarget({
+      componentCorePackage: 'elwins-test-web-components',
+      proxiesFile: '../elwins-test-web-components-vue/src/components.ts',
     }),
     {
       type: 'dist',
