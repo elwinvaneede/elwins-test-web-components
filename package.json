@@ -1,6 +1,6 @@
 {
   "name": "elwins-test-web-components",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Some test Web Components build with Stencil",
   "repository": {
     "type": "git",
