@@ -105,7 +105,7 @@ Use the bindings in https://github.com/elwinvaneede/elwins-test-web-components-r
 
 ### Angular
 
-Bindings not yet created, but possible. Contact me if you need them.
+Use the bindings in https://github.com/elwinvaneede/elwins-test-web-components-angular and follow the instructions there.
 
 ## Development
 

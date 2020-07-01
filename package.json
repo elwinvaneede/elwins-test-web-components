@@ -27,8 +27,9 @@
   },
   "devDependencies": {
     "@stencil/core": "^1.15.0",
+    "@stencil/angular-output-target": "^0.0.3",
     "@stencil/react-output-target": "^0.0.6",
-    "@stencil/vue-output-target": "0.0.1",
+    "@stencil/vue-output-target": "^0.0.1",
     "@types/jest": "^24.9.1",
     "@types/puppeteer": "^1.20.6",
     "jest": "^24.9.0",
