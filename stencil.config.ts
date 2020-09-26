@@ -14,6 +14,8 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: "elwins-test-web-components",
       proxiesFile: "../elwins-test-web-components-react/src/components.ts",
+      includeDefineCustomElements: true,
+      includePolyfills: true, // Enable if needed
     }),
     vueOutputTarget({
       componentCorePackage: "elwins-test-web-components",
