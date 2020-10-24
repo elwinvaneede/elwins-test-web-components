@@ -1,6 +1,6 @@
 {
   "name": "elwins-test-web-components",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Some test Web Components build with Stencil",
   "repository": {
     "type": "git",
@@ -14,7 +14,6 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/elwins-test-web-components/elwins-test-web-components.js",
   "files": [
     "dist/",
     "loader/"

@@ -22,7 +22,10 @@ _Note: Stencil and [Ionic](https://ionicframework.com/) are completely independe
 
 - Put a script tag similar to this in the head of your index.html:
   ```html
-  <script src="https://unpkg.com/elwins-test-web-components@latest/dist/elwins-test-web-components.js"></script>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/elwins-test-web-components@0.3.0/dist/elwins-test-web-components/elwins-test-web-components.esm.js"
+  ></script>
   ```
 - Then you can use the elements anywhere in your template, JSX, html etc.
 - For example:
@@ -30,82 +33,80 @@ _Note: Stencil and [Ionic](https://ionicframework.com/) are completely independe
   <eve-button href="https://elwinvaneede.com">Website</eve-button>
   ```
 
-### Node Modules
+### React
 
-- Run:
-  ```bash
-  npm install elwins-test-web-components --save
+Use the [React bindings](../react/README.md).
+
+### Angular
+
+Use the [Angular bindings](../angular/README.md).
+
+### Vue 3
+
+Use the [Vue bindings](../vue/README.md).
+
+### Vue 2
+
+- Run `npm install elwins-test-web-components` or `yarn add elwins-test-web-components`
+- Edit `src/main.js` to include:
+
+  ```js
+  // Import my test Web Components
+  import {
+    applyPolyfills,
+    defineCustomElements,
+  } from "elwins-test-web-components/loader";
+  // ...
+  // configure Vue.js to ignore my test Web Components
+  Vue.config.ignoredElements = [/eve-\w*/];
+  // Register my test Web Components
+  applyPolyfills().then(() => {
+    defineCustomElements(window);
+  });
+
+  new Vue({
+    render: (h) => h(App),
+  }).$mount("#app");
   ```
-- Put a script tag similar to this in the head of your index.html:
-  ```html
-  <script src="node_modules/elwins-test-web-components/dist/elwins-test-web-components.js"></script>
-  ```
-- Then you can use the elements anywhere in your template, JSX, html etc
-- For example:
-  ```html
-  <eve-button href="https://elwinvaneede.com/newsletter">Newsletter</eve-button>
-  ```
-
-### Vue
-
-For the best DX, use the bindings in https://github.com/elwinvaneede/elwins-test-web-components-vue and follow the instructions there.
-
-But you can use this as a fallback:
-
-- Run:
-  ```shell
-  npm install elwins-test-web-components --save
-  ```
-- Import the components into your `main.js` file by:
-
-  - importing the node module
-  - telling Vue to ignore the custom element tags (see https://vuejs.org/v2/api/#ignoredElements)
-  - binding the Stenciljs component code to the window object
-  - ```js
-    import Vue from "vue";
-    import App from "./App.vue";
-
-    import {
-      applyPolyfills,
-      defineCustomElements,
-    } from "elwins-test-web-components/loader";
-
-    Vue.config.productionTip = false;
-
-    // Tell Vue to ignore all components defined in the elwins-test-web-components
-    // package. The regex assumes all components names are prefixed
-    // 'eve'
-    Vue.config.ignoredElements = [/eve-\w*/];
-
-    // Bind the custom elements to the window object
-    applyPolyfills().then(() => {
-      defineCustomElements();
-    });
-
-    new Vue({
-      render: (h) => h(App),
-    }).$mount("#app");
-    ```
 
 - The components should then be available in any of the Vue components:
   ```js
   render() {
     return (
       <div>
-        <eve-button href="https://elwinvaneede.com/newsletter">Newsletter</eve-introduction>
+        <eve-button href="https://elwinvaneede.com">elwinvaneede.com</eve-button>
       </div>
     )
   }
   ```
-- Vue provides several different ways to install and use the framework in an application. The above technique for integrating a Stencil custom element library has been tested on a Vue application that was created using the vue-cli with ES2015 and WebPack as primary options. A similar technique should work if the application was generated using other options.
 
-### React
+_Vue provides several different ways to install and use the framework in an application. The above technique for integrating a Stencil custom element library has been tested on a Vue 2 application that was created using the vue-cli with ES2015 and WebPack as primary options. A similar technique should work if the application was generated using other options._
 
-Use the bindings in https://github.com/elwinvaneede/elwins-test-web-components-react and follow the instructions there.
+#### Binding Complex Data
 
-### Angular
+When binding complex data such as objects and arrays, use the `.prop` modifier to make Vue bind them as a property instead of an attribute:
 
-Use the bindings in https://github.com/elwinvaneede/elwins-test-web-components-angular and follow the instructions there.
+```html
+<eve-select :options.prop="myOptions" />
+```
+
+<small>[Based on the Shoelace docs](https://shoelace.style/getting-started/usage?id=binding-complex-data)</small>
+
+#### Two-way Binding
+
+One caveat is there's [no support for v-model on custom elements in Vue 2](https://github.com/vuejs/vue/issues/7830), but you can still achieve two-way binding manually:
+
+```html
+<!-- This doesn't work -->
+<eve-input v-model="name"></eve-input>
+
+<!-- This works, but it's a bit longer -->
+<eve-input :value="name" @input="name = $event.target.value"></eve-input>
+```
+
+If that's too verbose, [you can use this Directive from Shoelace](https://shoelace.style/getting-started/usage?id=using-a-custom-directive).
+
+<small>[Based on the Shoelace docs](https://shoelace.style/getting-started/usage?id=two-way-binding)</small>
 
 ## Development
 
