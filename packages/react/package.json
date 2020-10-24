@@ -1,7 +1,7 @@
 {
   "name": "elwins-test-web-components-react",
   "sideEffects": false,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "React specific wrapper for my test Web Components library",
   "license": "MIT",
   "repository": {
@@ -34,7 +34,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "elwins-test-web-components": "^0.1.8"
+    "elwins-test-web-components": "^0.1.10"
   },
   "peerDependencies": {
     "react": "^16.7.0",

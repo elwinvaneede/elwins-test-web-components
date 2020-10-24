@@ -1,6 +1,6 @@
 {
   "name": "elwins-test-web-components-angular",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Angular specific wrapper for my test Web Components library",
   "license": "MIT",
   "repository": {
@@ -28,20 +28,20 @@
     "dist/"
   ],
   "dependencies": {
-    "elwins-test-web-components": "^0.1.8",
+    "elwins-test-web-components": "^0.1.10",
     "tslib": "^1.9.3"
   },
   "peerDependencies": {
     "@angular-devkit/core": "^7.2.1",
     "@angular-devkit/schematics": "^7.2.1",
-    "@angular/core": "^7.2.1",
     "@angular/common": "^7.2.1",
-    "@angular/forms": "^7.2.1",
-    "@angular/router": "^7.2.1",
     "@angular/compiler": "^7.2.1",
     "@angular/compiler-cli": "^7.2.1",
+    "@angular/core": "^7.2.1",
+    "@angular/forms": "^7.2.1",
     "@angular/platform-browser": "^7.2.1",
     "@angular/platform-browser-dynamic": "^7.2.1",
+    "@angular/router": "^7.2.1",
     "rxjs": ">=6.2.0",
     "zone.js": "^0.8.26"
   },
