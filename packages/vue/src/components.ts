@@ -2,7 +2,7 @@
 /* tslint:disable */
 /* auto-generated vue proxies */
 import Vue, { PropOptions } from 'vue';
-import { createCommonRender, createCommonMethod } from './vue-component-lib/utils';
+import { createCommonRender } from './vue-component-lib/utils';
 
 import type { Components } from 'elwins-test-web-components';
 
