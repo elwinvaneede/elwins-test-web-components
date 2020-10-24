@@ -9,17 +9,17 @@ export const config: Config = {
     angularOutputTarget({
       componentCorePackage: "elwins-test-web-components",
       directivesProxyFile:
-        "../elwins-test-web-components-angular/src/directives/proxies.ts",
+        "../angular/src/directives/proxies.ts",
     }),
     reactOutputTarget({
       componentCorePackage: "elwins-test-web-components",
-      proxiesFile: "../elwins-test-web-components-react/src/components.ts",
+      proxiesFile: "../react/src/components.ts",
       includeDefineCustomElements: true,
       includePolyfills: true, // Enable if needed
     }),
     vueOutputTarget({
       componentCorePackage: "elwins-test-web-components",
-      proxiesFile: "../elwins-test-web-components-vue/src/components.ts",
+      proxiesFile: "../vue/src/components.ts",
       includeDefineCustomElements: true,
       includePolyfills: true, // Enable if needed
     }),
