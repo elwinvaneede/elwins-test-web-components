@@ -5,6 +5,7 @@ import { vueOutputTarget } from "@stencil/vue-output-target";
 
 export const config: Config = {
   namespace: "elwins-test-web-components",
+  taskQueue: 'async',
   outputTargets: [
     angularOutputTarget({
       componentCorePackage: "elwins-test-web-components",
@@ -15,13 +16,13 @@ export const config: Config = {
       componentCorePackage: "elwins-test-web-components",
       proxiesFile: "../react/src/components.ts",
       includeDefineCustomElements: true,
-      includePolyfills: true, // Enable if needed
+      includePolyfills: true,
     }),
     vueOutputTarget({
       componentCorePackage: "elwins-test-web-components",
-      proxiesFile: "../vue/src/components.ts",
+      proxiesFile: "../vue/src/proxies.ts",
       includeDefineCustomElements: true,
-      includePolyfills: true, // Enable if needed
+      includePolyfills: true,
     }),
     {
       type: "dist",
