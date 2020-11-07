@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                           | Default     |
-| -------- | --------- | ----------- | ------------------------------ | ----------- |
-| `data`   | `data`    |             | `Object \| Object[] \| string` | `undefined` |
+| Property | Attribute | Description | Type       | Default     |
+| -------- | --------- | ----------- | ---------- | ----------- |
+| `data`   | --        |             | `Object[]` | `undefined` |
 
 
 ----------------------------------------------

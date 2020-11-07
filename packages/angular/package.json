@@ -28,7 +28,7 @@
     "dist/"
   ],
   "dependencies": {
-    "elwins-test-web-components": "^0.3.2",
+    "elwins-test-web-components": "^0.3.3",
     "tslib": "^1.9.3"
   },
   "peerDependencies": {

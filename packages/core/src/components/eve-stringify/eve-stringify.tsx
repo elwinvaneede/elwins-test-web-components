@@ -6,7 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class EveStringify {
-  @Prop({reflect: false}) data: string | Array<Object> | Object;
+  @Prop({reflect: false}) data: Object[];
 
   render() {
     return <div>{JSON.stringify(this.data)}</div>;

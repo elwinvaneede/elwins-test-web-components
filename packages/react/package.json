@@ -34,7 +34,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "elwins-test-web-components": "^0.3.2"
+    "elwins-test-web-components": "^0.3.3"
   },
   "peerDependencies": {
     "react": "^16.7.0",

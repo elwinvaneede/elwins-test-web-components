@@ -39,7 +39,7 @@ export namespace Components {
         "middle": string;
     }
     interface EveStringify {
-        "data": string | Array<Object> | Object;
+        "data": Object[];
     }
 }
 declare global {
@@ -101,7 +101,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface EveStringify {
-        "data"?: string | Array<Object> | Object;
+        "data"?: Object[];
     }
     interface IntrinsicElements {
         "eve-button": EveButton;
