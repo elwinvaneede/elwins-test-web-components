@@ -5,10 +5,6 @@ import { defineContainer } from './vue-component-lib/utils';
 
 import { JSX } from 'elwins-test-web-components';
 
-import { applyPolyfills, defineCustomElements } from 'elwins-test-web-components/loader';
-
-applyPolyfills().then(() => defineCustomElements());
-
 export const EveButton = /*@__PURE__*/ defineContainer<JSX.EveButton>('eve-button', [
   'fill',
   'href',

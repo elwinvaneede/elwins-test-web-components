@@ -21,8 +21,8 @@ export const config: Config = {
     vueOutputTarget({
       componentCorePackage: "elwins-test-web-components",
       proxiesFile: "../vue/src/proxies.ts",
-      includeDefineCustomElements: true,
-      includePolyfills: true,
+      includeDefineCustomElements: false,
+      includePolyfills: false,
     }),
     {
       type: "dist",
