@@ -1,7 +1,7 @@
 {
   "name": "elwins-test-web-components-react",
   "sideEffects": false,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React specific wrapper for my test Web Components library",
   "license": "MIT",
   "repository": {
