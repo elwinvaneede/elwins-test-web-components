@@ -1,6 +1,6 @@
 {
   "name": "elwins-test-web-components-angular",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Angular specific wrapper for my test Web Components library",
   "license": "MIT",
   "repository": {
@@ -28,7 +28,7 @@
     "dist/"
   ],
   "dependencies": {
-    "elwins-test-web-components": "^0.3.3",
+    "elwins-test-web-components": "^0.3.4",
     "tslib": "^1.9.3"
   },
   "peerDependencies": {
