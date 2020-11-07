@@ -23,3 +23,8 @@ export const EveIntroduction = /*@__PURE__*/ defineContainer<JSX.EveIntroduction
   'last'
 ]);
 
+
+export const EveStringify = /*@__PURE__*/ defineContainer<JSX.EveStringify>('eve-stringify', [
+  'data'
+]);
+

@@ -10,3 +10,4 @@ import { applyPolyfills, defineCustomElements } from 'elwins-test-web-components
 applyPolyfills().then(() => defineCustomElements());
 export const EveButton = /*@__PURE__*/createReactComponent<JSX.EveButton, HTMLEveButtonElement>('eve-button');
 export const EveIntroduction = /*@__PURE__*/createReactComponent<JSX.EveIntroduction, HTMLEveIntroductionElement>('eve-introduction');
+export const EveStringify = /*@__PURE__*/createReactComponent<JSX.EveStringify, HTMLEveStringifyElement>('eve-stringify');

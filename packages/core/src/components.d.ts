@@ -38,6 +38,9 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface EveStringify {
+        "data": string | Array<Object> | Object;
+    }
 }
 declare global {
     interface HTMLEveButtonElement extends Components.EveButton, HTMLStencilElement {
@@ -52,9 +55,16 @@ declare global {
         prototype: HTMLEveIntroductionElement;
         new (): HTMLEveIntroductionElement;
     };
+    interface HTMLEveStringifyElement extends Components.EveStringify, HTMLStencilElement {
+    }
+    var HTMLEveStringifyElement: {
+        prototype: HTMLEveStringifyElement;
+        new (): HTMLEveStringifyElement;
+    };
     interface HTMLElementTagNameMap {
         "eve-button": HTMLEveButtonElement;
         "eve-introduction": HTMLEveIntroductionElement;
+        "eve-stringify": HTMLEveStringifyElement;
     }
 }
 declare namespace LocalJSX {
@@ -90,9 +100,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface EveStringify {
+        "data"?: string | Array<Object> | Object;
+    }
     interface IntrinsicElements {
         "eve-button": EveButton;
         "eve-introduction": EveIntroduction;
+        "eve-stringify": EveStringify;
     }
 }
 export { LocalJSX as JSX };
@@ -101,6 +115,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "eve-button": LocalJSX.EveButton & JSXBase.HTMLAttributes<HTMLEveButtonElement>;
             "eve-introduction": LocalJSX.EveIntroduction & JSXBase.HTMLAttributes<HTMLEveIntroductionElement>;
+            "eve-stringify": LocalJSX.EveStringify & JSXBase.HTMLAttributes<HTMLEveStringifyElement>;
         }
     }
 }

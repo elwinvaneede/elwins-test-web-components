@@ -42,3 +42,22 @@ export class EveIntroduction {
     this.el = r.nativeElement;
   }
 }
+
+
+export declare interface EveStringify extends Components.EveStringify {}
+@ProxyCmp({
+  inputs: ['data']
+})
+@Component({
+  selector: 'eve-stringify',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['data']
+})
+export class EveStringify {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
