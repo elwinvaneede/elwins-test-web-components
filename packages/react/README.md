@@ -27,11 +27,11 @@ import { EveButton } from "elwins-test-web-components-react";
 Use it in your JSX as any React component:
 
 ```html
-<EveButton href="https://elwinvaneede.com"></EveButton>
+<EveButton href="https://elwinvaneede.com">Website</EveButton>
 ```
 
 ## How to release a new version
 
-- Build the core Stencil package (`elwins-test-web-comoonents`)
+- Build the core package
 - Run build on this package
 - Publish

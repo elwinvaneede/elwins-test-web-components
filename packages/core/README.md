@@ -61,7 +61,7 @@ Use the [Vue bindings](../vue/README.md).
   Vue.config.ignoredElements = [/eve-\w*/];
   // Register my test Web Components
   applyPolyfills().then(() => {
-    defineCustomElements(window);
+    defineCustomElements();
   });
 
   new Vue({
@@ -74,7 +74,7 @@ Use the [Vue bindings](../vue/README.md).
   render() {
     return (
       <div>
-        <eve-button href="https://elwinvaneede.com">elwinvaneede.com</eve-button>
+        <eve-button href="https://elwinvaneede.com">Website</eve-button>
       </div>
     )
   }

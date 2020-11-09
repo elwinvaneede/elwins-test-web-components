@@ -18,6 +18,27 @@ Or:
 yarn add elwins-test-web-components-vue
 ```
 
+Edit the `main.js` file like this:
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import {
+  applyPolyfills,
+  defineCustomElements,
+} from "elwins-test-web-components/loader";
+
+const app = createApp(App);
+
+applyPolyfills().then(() => {
+  defineCustomElements().then(() => {
+    app.mount("#app");
+  });
+});
+```
+
+_This is needed because `defineCustomElements` is async. Otherwise the Vue 3 mount is ran before the custom elements are fully defined, resulting in Vue 3 not correctly binding object/array values on load._
+
 Import the component(s) you want to use:
 
 ```js
@@ -27,11 +48,11 @@ import { EveButton } from "elwins-test-web-components-vue";
 Use it in your template as any Vue component:
 
 ```jsx
-<EveButton href="https://elwinvaneede.com"></EveButton>
+<EveButton href="https://elwinvaneede.com">Website</EveButton>
 ```
 
 ## How to release a new version
 
-- Build the core Stencil package (`elwins-test-web-components`)
+- Build the core package
 - Run build on this package
 - Publish

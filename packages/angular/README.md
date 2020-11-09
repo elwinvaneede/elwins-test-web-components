@@ -41,7 +41,7 @@ Use the component(s) you want in your html:
 
 ## How to release a new version
 
-- Build the core Stencil package (`elwins-test-web-comoonents`)
+- Build the core package
 - Update `src/component-library-module.ts`.
   - You will need to import all of your components from `./directives/proxies`.
   - Then update the `DECLARATIONS` const array to also list out all of the component names.
